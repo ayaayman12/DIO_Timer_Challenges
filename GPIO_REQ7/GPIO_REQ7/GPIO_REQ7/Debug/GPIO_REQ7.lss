@@ -3,29 +3,29 @@ GPIO_REQ7.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         00000454  00000000  00000000  00000054  2**1
+  0 .text         00000400  00000000  00000000  00000054  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         00000000  00800060  00800060  000004a8  2**0
+  1 .data         00000000  00800060  00800060  00000454  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .comment      00000030  00000000  00000000  000004a8  2**0
+  2 .comment      00000030  00000000  00000000  00000454  2**0
                   CONTENTS, READONLY
-  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000004d8  2**2
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000484  2**2
                   CONTENTS, READONLY
-  4 .debug_aranges 000000d0  00000000  00000000  00000514  2**0
+  4 .debug_aranges 000000d0  00000000  00000000  000004c0  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   00000f41  00000000  00000000  000005e4  2**0
+  5 .debug_info   00000f2d  00000000  00000000  00000590  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 00000792  00000000  00000000  00001525  2**0
+  6 .debug_abbrev 00000760  00000000  00000000  000014bd  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   00000634  00000000  00000000  00001cb7  2**0
+  7 .debug_line   00000641  00000000  00000000  00001c1d  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  00000160  00000000  00000000  000022ec  2**2
+  8 .debug_frame  00000154  00000000  00000000  00002260  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    000004c9  00000000  00000000  0000244c  2**0
+  9 .debug_str    000004ba  00000000  00000000  000023b4  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    00000d3f  00000000  00000000  00002915  2**0
+ 10 .debug_loc    00000cdc  00000000  00000000  0000286e  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00000090  00000000  00000000  00003654  2**0
+ 11 .debug_ranges 00000090  00000000  00000000  0000354a  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -52,26 +52,26 @@ Disassembly of section .text:
   48:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
   4c:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
   50:	0c 94 48 00 	jmp	0x90	; 0x90 <__bad_interrupt>
-  54:	11 01       	movw	r2, r2
-  56:	17 01       	movw	r2, r14
-  58:	1d 01       	movw	r2, r26
-  5a:	23 01       	movw	r4, r6
-  5c:	29 01       	movw	r4, r18
-  5e:	2f 01       	movw	r4, r30
-  60:	35 01       	movw	r6, r10
-  62:	3b 01       	movw	r6, r22
-  64:	41 01       	movw	r8, r2
-  66:	47 01       	movw	r8, r14
-  68:	58 01       	movw	r10, r16
-  6a:	5e 01       	movw	r10, r28
-  6c:	64 01       	movw	r12, r8
-  6e:	6a 01       	movw	r12, r20
-  70:	70 01       	movw	r14, r0
-  72:	76 01       	movw	r14, r12
-  74:	7c 01       	movw	r14, r24
-  76:	82 01       	movw	r16, r4
-  78:	88 01       	movw	r16, r16
-  7a:	8e 01       	movw	r16, r28
+  54:	15 01       	movw	r2, r10
+  56:	1b 01       	movw	r2, r22
+  58:	21 01       	movw	r4, r2
+  5a:	27 01       	movw	r4, r14
+  5c:	2d 01       	movw	r4, r26
+  5e:	33 01       	movw	r6, r6
+  60:	39 01       	movw	r6, r18
+  62:	3f 01       	movw	r6, r30
+  64:	45 01       	movw	r8, r10
+  66:	4b 01       	movw	r8, r22
+  68:	5c 01       	movw	r10, r24
+  6a:	62 01       	movw	r12, r4
+  6c:	68 01       	movw	r12, r16
+  6e:	6e 01       	movw	r12, r28
+  70:	74 01       	movw	r14, r8
+  72:	7a 01       	movw	r14, r20
+  74:	80 01       	movw	r16, r0
+  76:	86 01       	movw	r16, r12
+  78:	8c 01       	movw	r16, r24
+  7a:	92 01       	movw	r18, r4
 
 0000007c <__ctors_end>:
   7c:	11 24       	eor	r1, r1
@@ -81,7 +81,7 @@ Disassembly of section .text:
   84:	de bf       	out	0x3e, r29	; 62
   86:	cd bf       	out	0x3d, r28	; 61
   88:	0e 94 aa 00 	call	0x154	; 0x154 <main>
-  8c:	0c 94 28 02 	jmp	0x450	; 0x450 <_exit>
+  8c:	0c 94 fe 01 	jmp	0x3fc	; 0x3fc <_exit>
 
 00000090 <__bad_interrupt>:
   90:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
@@ -246,16 +246,16 @@ void gpioPinWrite(uint8_t u8_port, uint8_t u8_pins, uint8_t u8_value)
 
 00000154 <main>:
 #include "sevenSeg.h"
-#include <util/delay.h>
+#include "softwareDelay.h"
 
 int main(void)
 {
 	 sevenSegInit(SEG_0);
  154:	80 e0       	ldi	r24, 0x00	; 0
- 156:	0e 94 db 00 	call	0x1b6	; 0x1b6 <sevenSegInit>
+ 156:	0e 94 df 00 	call	0x1be	; 0x1be <sevenSegInit>
 	 sevenSegInit(SEG_1);
  15a:	81 e0       	ldi	r24, 0x01	; 1
- 15c:	0e 94 db 00 	call	0x1b6	; 0x1b6 <sevenSegInit>
+ 15c:	0e 94 df 00 	call	0x1be	; 0x1be <sevenSegInit>
 	 uint8_t i,j;
 	 uint16_t z;
     /* Replace with your application code */
@@ -263,7 +263,7 @@ int main(void)
 	 {
 		  for(i=0;i<10;i++) 
  160:	00 e0       	ldi	r16, 0x00	; 0
- 162:	27 c0       	rjmp	.+78     	; 0x1b2 <main+0x5e>
+ 162:	2b c0       	rjmp	.+86     	; 0x1ba <main+0x66>
 		  {
 				for(j=0;j<10;j++) 
 				{
@@ -272,529 +272,481 @@ int main(void)
 						   sevenSegWrite(SEG_0,j);
  164:	61 2f       	mov	r22, r17
  166:	80 e0       	ldi	r24, 0x00	; 0
- 168:	0e 94 00 01 	call	0x200	; 0x200 <sevenSegWrite>
+ 168:	0e 94 04 01 	call	0x208	; 0x208 <sevenSegWrite>
 						   sevenSegEnable(SEG_0);
  16c:	80 e0       	ldi	r24, 0x00	; 0
- 16e:	0e 94 94 01 	call	0x328	; 0x328 <sevenSegEnable>
+ 16e:	0e 94 98 01 	call	0x330	; 0x330 <sevenSegEnable>
 						   SwDelay_ms(100);
- 172:	84 e6       	ldi	r24, 0x64	; 100
- 174:	90 e0       	ldi	r25, 0x00	; 0
- 176:	0e 94 b6 01 	call	0x36c	; 0x36c <SwDelay_ms>
+ 172:	64 e6       	ldi	r22, 0x64	; 100
+ 174:	70 e0       	ldi	r23, 0x00	; 0
+ 176:	80 e0       	ldi	r24, 0x00	; 0
+ 178:	90 e0       	ldi	r25, 0x00	; 0
+ 17a:	0e 94 ba 01 	call	0x374	; 0x374 <SwDelay_ms>
 						   sevenSegDisable(SEG_0);
- 17a:	80 e0       	ldi	r24, 0x00	; 0
- 17c:	0e 94 a5 01 	call	0x34a	; 0x34a <sevenSegDisable>
+ 17e:	80 e0       	ldi	r24, 0x00	; 0
+ 180:	0e 94 a9 01 	call	0x352	; 0x352 <sevenSegDisable>
 						   sevenSegWrite(SEG_1 ,i);
- 180:	60 2f       	mov	r22, r16
- 182:	81 e0       	ldi	r24, 0x01	; 1
- 184:	0e 94 00 01 	call	0x200	; 0x200 <sevenSegWrite>
+ 184:	60 2f       	mov	r22, r16
+ 186:	81 e0       	ldi	r24, 0x01	; 1
+ 188:	0e 94 04 01 	call	0x208	; 0x208 <sevenSegWrite>
 						   sevenSegEnable(SEG_1);
- 188:	81 e0       	ldi	r24, 0x01	; 1
- 18a:	0e 94 94 01 	call	0x328	; 0x328 <sevenSegEnable>
+ 18c:	81 e0       	ldi	r24, 0x01	; 1
+ 18e:	0e 94 98 01 	call	0x330	; 0x330 <sevenSegEnable>
 						   SwDelay_ms(100);
- 18e:	84 e6       	ldi	r24, 0x64	; 100
- 190:	90 e0       	ldi	r25, 0x00	; 0
- 192:	0e 94 b6 01 	call	0x36c	; 0x36c <SwDelay_ms>
+ 192:	64 e6       	ldi	r22, 0x64	; 100
+ 194:	70 e0       	ldi	r23, 0x00	; 0
+ 196:	80 e0       	ldi	r24, 0x00	; 0
+ 198:	90 e0       	ldi	r25, 0x00	; 0
+ 19a:	0e 94 ba 01 	call	0x374	; 0x374 <SwDelay_ms>
 						   sevenSegDisable(SEG_1);
- 196:	81 e0       	ldi	r24, 0x01	; 1
- 198:	0e 94 a5 01 	call	0x34a	; 0x34a <sevenSegDisable>
- 19c:	21 97       	sbiw	r28, 0x01	; 1
+ 19e:	81 e0       	ldi	r24, 0x01	; 1
+ 1a0:	0e 94 a9 01 	call	0x352	; 0x352 <sevenSegDisable>
+ 1a4:	21 97       	sbiw	r28, 0x01	; 1
 	 {
 		  for(i=0;i<10;i++) 
 		  {
 				for(j=0;j<10;j++) 
 				{
 					 for (z=0;z<5;z++)
- 19e:	11 f7       	brne	.-60     	; 0x164 <main+0x10>
+ 1a6:	f1 f6       	brne	.-68     	; 0x164 <main+0x10>
     /* Replace with your application code */
     while (1)
 	 {
 		  for(i=0;i<10;i++) 
 		  {
 				for(j=0;j<10;j++) 
- 1a0:	1f 5f       	subi	r17, 0xFF	; 255
- 1a2:	1a 30       	cpi	r17, 0x0A	; 10
- 1a4:	19 f0       	breq	.+6      	; 0x1ac <main+0x58>
+ 1a8:	1f 5f       	subi	r17, 0xFF	; 255
+ 1aa:	1a 30       	cpi	r17, 0x0A	; 10
+ 1ac:	19 f0       	breq	.+6      	; 0x1b4 <main+0x60>
 #include "registers.h"
 #include "sevenSeg.h"
-#include <util/delay.h>
+#include "softwareDelay.h"
 
 int main(void)
 {
- 1a6:	c5 e0       	ldi	r28, 0x05	; 5
- 1a8:	d0 e0       	ldi	r29, 0x00	; 0
- 1aa:	dc cf       	rjmp	.-72     	; 0x164 <main+0x10>
+ 1ae:	c5 e0       	ldi	r28, 0x05	; 5
+ 1b0:	d0 e0       	ldi	r29, 0x00	; 0
+ 1b2:	d8 cf       	rjmp	.-80     	; 0x164 <main+0x10>
 	 uint8_t i,j;
 	 uint16_t z;
     /* Replace with your application code */
     while (1)
 	 {
 		  for(i=0;i<10;i++) 
- 1ac:	0f 5f       	subi	r16, 0xFF	; 255
- 1ae:	0a 30       	cpi	r16, 0x0A	; 10
- 1b0:	b9 f2       	breq	.-82     	; 0x160 <main+0xc>
+ 1b4:	0f 5f       	subi	r16, 0xFF	; 255
+ 1b6:	0a 30       	cpi	r16, 0x0A	; 10
+ 1b8:	99 f2       	breq	.-90     	; 0x160 <main+0xc>
 #include "registers.h"
 #include "sevenSeg.h"
-#include <util/delay.h>
+#include "softwareDelay.h"
 
 int main(void)
 {
- 1b2:	10 e0       	ldi	r17, 0x00	; 0
- 1b4:	f8 cf       	rjmp	.-16     	; 0x1a6 <main+0x52>
+ 1ba:	10 e0       	ldi	r17, 0x00	; 0
+ 1bc:	f8 cf       	rjmp	.-16     	; 0x1ae <main+0x5a>
 
-000001b6 <sevenSegInit>:
+000001be <sevenSegInit>:
 
 #include "sevenSeg.h"
 
 void sevenSegInit(En_SevenSegId_t a_segment_id)
 {
 	switch (a_segment_id)
- 1b6:	88 23       	and	r24, r24
- 1b8:	19 f0       	breq	.+6      	; 0x1c0 <sevenSegInit+0xa>
- 1ba:	81 30       	cpi	r24, 0x01	; 1
- 1bc:	89 f0       	breq	.+34     	; 0x1e0 <sevenSegInit+0x2a>
- 1be:	08 95       	ret
+ 1be:	88 23       	and	r24, r24
+ 1c0:	19 f0       	breq	.+6      	; 0x1c8 <sevenSegInit+0xa>
+ 1c2:	81 30       	cpi	r24, 0x01	; 1
+ 1c4:	89 f0       	breq	.+34     	; 0x1e8 <sevenSegInit+0x2a>
+ 1c6:	08 95       	ret
 	{
 		case SEG_0:
 		{
 			gpioPinDirection(SEG_BCD_GPIO,SEG_BCD_BITS,OUTPUT);  //set data bits direction as output
- 1c0:	4f ef       	ldi	r20, 0xFF	; 255
- 1c2:	6f e0       	ldi	r22, 0x0F	; 15
- 1c4:	81 e0       	ldi	r24, 0x01	; 1
- 1c6:	0e 94 4a 00 	call	0x94	; 0x94 <gpioPinDirection>
+ 1c8:	4f ef       	ldi	r20, 0xFF	; 255
+ 1ca:	6f e0       	ldi	r22, 0x0F	; 15
+ 1cc:	81 e0       	ldi	r24, 0x01	; 1
+ 1ce:	0e 94 4a 00 	call	0x94	; 0x94 <gpioPinDirection>
 		   gpioPinDirection(SEG_EN1_GPIO,SEG_EN1_BIT,OUTPUT);   //set enable bit direction as output
- 1ca:	4f ef       	ldi	r20, 0xFF	; 255
- 1cc:	64 e0       	ldi	r22, 0x04	; 4
- 1ce:	83 e0       	ldi	r24, 0x03	; 3
- 1d0:	0e 94 4a 00 	call	0x94	; 0x94 <gpioPinDirection>
+ 1d2:	4f ef       	ldi	r20, 0xFF	; 255
+ 1d4:	64 e0       	ldi	r22, 0x04	; 4
+ 1d6:	83 e0       	ldi	r24, 0x03	; 3
+ 1d8:	0e 94 4a 00 	call	0x94	; 0x94 <gpioPinDirection>
 			gpioPinWrite(SEG_BCD_GPIO,SEG_BCD_BITS,LOW);
- 1d4:	40 e0       	ldi	r20, 0x00	; 0
- 1d6:	6f e0       	ldi	r22, 0x0F	; 15
- 1d8:	81 e0       	ldi	r24, 0x01	; 1
- 1da:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
+ 1dc:	40 e0       	ldi	r20, 0x00	; 0
+ 1de:	6f e0       	ldi	r22, 0x0F	; 15
+ 1e0:	81 e0       	ldi	r24, 0x01	; 1
+ 1e2:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
 			break;
- 1de:	08 95       	ret
+ 1e6:	08 95       	ret
 		}
 		case SEG_1:
 		{
 			gpioPinDirection(SEG_BCD_GPIO,SEG_BCD_BITS,OUTPUT);  //set data bits direction as output
- 1e0:	4f ef       	ldi	r20, 0xFF	; 255
- 1e2:	6f e0       	ldi	r22, 0x0F	; 15
- 1e4:	81 e0       	ldi	r24, 0x01	; 1
- 1e6:	0e 94 4a 00 	call	0x94	; 0x94 <gpioPinDirection>
+ 1e8:	4f ef       	ldi	r20, 0xFF	; 255
+ 1ea:	6f e0       	ldi	r22, 0x0F	; 15
+ 1ec:	81 e0       	ldi	r24, 0x01	; 1
+ 1ee:	0e 94 4a 00 	call	0x94	; 0x94 <gpioPinDirection>
 			gpioPinDirection(SEG_EN2_GPIO,SEG_EN2_BIT,OUTPUT);   //set enable bit direction as output
- 1ea:	4f ef       	ldi	r20, 0xFF	; 255
- 1ec:	68 e0       	ldi	r22, 0x08	; 8
- 1ee:	83 e0       	ldi	r24, 0x03	; 3
- 1f0:	0e 94 4a 00 	call	0x94	; 0x94 <gpioPinDirection>
+ 1f2:	4f ef       	ldi	r20, 0xFF	; 255
+ 1f4:	68 e0       	ldi	r22, 0x08	; 8
+ 1f6:	83 e0       	ldi	r24, 0x03	; 3
+ 1f8:	0e 94 4a 00 	call	0x94	; 0x94 <gpioPinDirection>
 			gpioPinWrite(SEG_BCD_GPIO,SEG_BCD_BITS,LOW);
- 1f4:	40 e0       	ldi	r20, 0x00	; 0
- 1f6:	6f e0       	ldi	r22, 0x0F	; 15
- 1f8:	81 e0       	ldi	r24, 0x01	; 1
- 1fa:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
- 1fe:	08 95       	ret
+ 1fc:	40 e0       	ldi	r20, 0x00	; 0
+ 1fe:	6f e0       	ldi	r22, 0x0F	; 15
+ 200:	81 e0       	ldi	r24, 0x01	; 1
+ 202:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
+ 206:	08 95       	ret
 
-00000200 <sevenSegWrite>:
+00000208 <sevenSegWrite>:
 	
 }
 
 void sevenSegWrite(En_SevenSegId_t en_segment_id, uint8_t u8_number)
 {
 	switch( en_segment_id)
- 200:	88 23       	and	r24, r24
- 202:	21 f0       	breq	.+8      	; 0x20c <sevenSegWrite+0xc>
- 204:	81 30       	cpi	r24, 0x01	; 1
- 206:	09 f4       	brne	.+2      	; 0x20a <sevenSegWrite+0xa>
- 208:	48 c0       	rjmp	.+144    	; 0x29a <sevenSegWrite+0x9a>
- 20a:	08 95       	ret
+ 208:	88 23       	and	r24, r24
+ 20a:	21 f0       	breq	.+8      	; 0x214 <sevenSegWrite+0xc>
+ 20c:	81 30       	cpi	r24, 0x01	; 1
+ 20e:	09 f4       	brne	.+2      	; 0x212 <sevenSegWrite+0xa>
+ 210:	48 c0       	rjmp	.+144    	; 0x2a2 <sevenSegWrite+0x9a>
+ 212:	08 95       	ret
 	{
 		case SEG_0:
 		{
 			switch (u8_number)
- 20c:	86 2f       	mov	r24, r22
- 20e:	90 e0       	ldi	r25, 0x00	; 0
- 210:	8a 30       	cpi	r24, 0x0A	; 10
- 212:	91 05       	cpc	r25, r1
- 214:	08 f0       	brcs	.+2      	; 0x218 <sevenSegWrite+0x18>
- 216:	87 c0       	rjmp	.+270    	; 0x326 <sevenSegWrite+0x126>
- 218:	fc 01       	movw	r30, r24
- 21a:	e6 5d       	subi	r30, 0xD6	; 214
- 21c:	ff 4f       	sbci	r31, 0xFF	; 255
- 21e:	0c 94 22 02 	jmp	0x444	; 0x444 <__tablejump2__>
+ 214:	86 2f       	mov	r24, r22
+ 216:	90 e0       	ldi	r25, 0x00	; 0
+ 218:	8a 30       	cpi	r24, 0x0A	; 10
+ 21a:	91 05       	cpc	r25, r1
+ 21c:	08 f0       	brcs	.+2      	; 0x220 <sevenSegWrite+0x18>
+ 21e:	87 c0       	rjmp	.+270    	; 0x32e <sevenSegWrite+0x126>
+ 220:	fc 01       	movw	r30, r24
+ 222:	e6 5d       	subi	r30, 0xD6	; 214
+ 224:	ff 4f       	sbci	r31, 0xFF	; 255
+ 226:	0c 94 f8 01 	jmp	0x3f0	; 0x3f0 <__tablejump2__>
 			{
 				case 0: gpioPinWrite(SEG_BCD_GPIO,SEG_BCD_BITS,LOW); break;
- 222:	40 e0       	ldi	r20, 0x00	; 0
- 224:	6f e0       	ldi	r22, 0x0F	; 15
- 226:	81 e0       	ldi	r24, 0x01	; 1
- 228:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
- 22c:	08 95       	ret
+ 22a:	40 e0       	ldi	r20, 0x00	; 0
+ 22c:	6f e0       	ldi	r22, 0x0F	; 15
+ 22e:	81 e0       	ldi	r24, 0x01	; 1
+ 230:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
+ 234:	08 95       	ret
 				case 1: gpioPinWrite(SEG_BCD_GPIO,SEG_BCD_BITS,1); break;
- 22e:	41 e0       	ldi	r20, 0x01	; 1
- 230:	6f e0       	ldi	r22, 0x0F	; 15
- 232:	81 e0       	ldi	r24, 0x01	; 1
- 234:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
- 238:	08 95       	ret
+ 236:	41 e0       	ldi	r20, 0x01	; 1
+ 238:	6f e0       	ldi	r22, 0x0F	; 15
+ 23a:	81 e0       	ldi	r24, 0x01	; 1
+ 23c:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
+ 240:	08 95       	ret
 				case 2: gpioPinWrite(SEG_BCD_GPIO,SEG_BCD_BITS,2); break;
- 23a:	42 e0       	ldi	r20, 0x02	; 2
- 23c:	6f e0       	ldi	r22, 0x0F	; 15
- 23e:	81 e0       	ldi	r24, 0x01	; 1
- 240:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
- 244:	08 95       	ret
+ 242:	42 e0       	ldi	r20, 0x02	; 2
+ 244:	6f e0       	ldi	r22, 0x0F	; 15
+ 246:	81 e0       	ldi	r24, 0x01	; 1
+ 248:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
+ 24c:	08 95       	ret
 				case 3: gpioPinWrite(SEG_BCD_GPIO,SEG_BCD_BITS,3); break;
- 246:	43 e0       	ldi	r20, 0x03	; 3
- 248:	6f e0       	ldi	r22, 0x0F	; 15
- 24a:	81 e0       	ldi	r24, 0x01	; 1
- 24c:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
- 250:	08 95       	ret
+ 24e:	43 e0       	ldi	r20, 0x03	; 3
+ 250:	6f e0       	ldi	r22, 0x0F	; 15
+ 252:	81 e0       	ldi	r24, 0x01	; 1
+ 254:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
+ 258:	08 95       	ret
 				case 4: gpioPinWrite(SEG_BCD_GPIO,SEG_BCD_BITS,4); break;
- 252:	44 e0       	ldi	r20, 0x04	; 4
- 254:	6f e0       	ldi	r22, 0x0F	; 15
- 256:	81 e0       	ldi	r24, 0x01	; 1
- 258:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
- 25c:	08 95       	ret
+ 25a:	44 e0       	ldi	r20, 0x04	; 4
+ 25c:	6f e0       	ldi	r22, 0x0F	; 15
+ 25e:	81 e0       	ldi	r24, 0x01	; 1
+ 260:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
+ 264:	08 95       	ret
 				case 5: gpioPinWrite(SEG_BCD_GPIO,SEG_BCD_BITS,5); break;
- 25e:	45 e0       	ldi	r20, 0x05	; 5
- 260:	6f e0       	ldi	r22, 0x0F	; 15
- 262:	81 e0       	ldi	r24, 0x01	; 1
- 264:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
- 268:	08 95       	ret
+ 266:	45 e0       	ldi	r20, 0x05	; 5
+ 268:	6f e0       	ldi	r22, 0x0F	; 15
+ 26a:	81 e0       	ldi	r24, 0x01	; 1
+ 26c:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
+ 270:	08 95       	ret
 				case 6: gpioPinWrite(SEG_BCD_GPIO,SEG_BCD_BITS,6); break;
- 26a:	46 e0       	ldi	r20, 0x06	; 6
- 26c:	6f e0       	ldi	r22, 0x0F	; 15
- 26e:	81 e0       	ldi	r24, 0x01	; 1
- 270:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
- 274:	08 95       	ret
+ 272:	46 e0       	ldi	r20, 0x06	; 6
+ 274:	6f e0       	ldi	r22, 0x0F	; 15
+ 276:	81 e0       	ldi	r24, 0x01	; 1
+ 278:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
+ 27c:	08 95       	ret
 				case 7: gpioPinWrite(SEG_BCD_GPIO,SEG_BCD_BITS,7); break;
- 276:	47 e0       	ldi	r20, 0x07	; 7
- 278:	6f e0       	ldi	r22, 0x0F	; 15
- 27a:	81 e0       	ldi	r24, 0x01	; 1
- 27c:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
- 280:	08 95       	ret
+ 27e:	47 e0       	ldi	r20, 0x07	; 7
+ 280:	6f e0       	ldi	r22, 0x0F	; 15
+ 282:	81 e0       	ldi	r24, 0x01	; 1
+ 284:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
+ 288:	08 95       	ret
 				case 8: gpioPinWrite(SEG_BCD_GPIO,SEG_BCD_BITS,8); break;
- 282:	48 e0       	ldi	r20, 0x08	; 8
- 284:	6f e0       	ldi	r22, 0x0F	; 15
- 286:	81 e0       	ldi	r24, 0x01	; 1
- 288:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
- 28c:	08 95       	ret
+ 28a:	48 e0       	ldi	r20, 0x08	; 8
+ 28c:	6f e0       	ldi	r22, 0x0F	; 15
+ 28e:	81 e0       	ldi	r24, 0x01	; 1
+ 290:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
+ 294:	08 95       	ret
 				case 9: gpioPinWrite(SEG_BCD_GPIO,SEG_BCD_BITS,9); break;
- 28e:	49 e0       	ldi	r20, 0x09	; 9
- 290:	6f e0       	ldi	r22, 0x0F	; 15
- 292:	81 e0       	ldi	r24, 0x01	; 1
- 294:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
- 298:	08 95       	ret
+ 296:	49 e0       	ldi	r20, 0x09	; 9
+ 298:	6f e0       	ldi	r22, 0x0F	; 15
+ 29a:	81 e0       	ldi	r24, 0x01	; 1
+ 29c:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
+ 2a0:	08 95       	ret
 			}
 			break;
 		}
 		case SEG_1:
 		{
 			switch (u8_number)
- 29a:	86 2f       	mov	r24, r22
- 29c:	90 e0       	ldi	r25, 0x00	; 0
- 29e:	8a 30       	cpi	r24, 0x0A	; 10
- 2a0:	91 05       	cpc	r25, r1
- 2a2:	08 f0       	brcs	.+2      	; 0x2a6 <sevenSegWrite+0xa6>
- 2a4:	40 c0       	rjmp	.+128    	; 0x326 <sevenSegWrite+0x126>
- 2a6:	fc 01       	movw	r30, r24
- 2a8:	ec 5c       	subi	r30, 0xCC	; 204
- 2aa:	ff 4f       	sbci	r31, 0xFF	; 255
- 2ac:	0c 94 22 02 	jmp	0x444	; 0x444 <__tablejump2__>
+ 2a2:	86 2f       	mov	r24, r22
+ 2a4:	90 e0       	ldi	r25, 0x00	; 0
+ 2a6:	8a 30       	cpi	r24, 0x0A	; 10
+ 2a8:	91 05       	cpc	r25, r1
+ 2aa:	08 f0       	brcs	.+2      	; 0x2ae <sevenSegWrite+0xa6>
+ 2ac:	40 c0       	rjmp	.+128    	; 0x32e <sevenSegWrite+0x126>
+ 2ae:	fc 01       	movw	r30, r24
+ 2b0:	ec 5c       	subi	r30, 0xCC	; 204
+ 2b2:	ff 4f       	sbci	r31, 0xFF	; 255
+ 2b4:	0c 94 f8 01 	jmp	0x3f0	; 0x3f0 <__tablejump2__>
 			{
 				case 0: gpioPinWrite(SEG_BCD_GPIO,SEG_BCD_BITS,LOW); break;
- 2b0:	40 e0       	ldi	r20, 0x00	; 0
- 2b2:	6f e0       	ldi	r22, 0x0F	; 15
- 2b4:	81 e0       	ldi	r24, 0x01	; 1
- 2b6:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
- 2ba:	08 95       	ret
+ 2b8:	40 e0       	ldi	r20, 0x00	; 0
+ 2ba:	6f e0       	ldi	r22, 0x0F	; 15
+ 2bc:	81 e0       	ldi	r24, 0x01	; 1
+ 2be:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
+ 2c2:	08 95       	ret
 				case 1: gpioPinWrite(SEG_BCD_GPIO,SEG_BCD_BITS,1); break;
- 2bc:	41 e0       	ldi	r20, 0x01	; 1
- 2be:	6f e0       	ldi	r22, 0x0F	; 15
- 2c0:	81 e0       	ldi	r24, 0x01	; 1
- 2c2:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
- 2c6:	08 95       	ret
+ 2c4:	41 e0       	ldi	r20, 0x01	; 1
+ 2c6:	6f e0       	ldi	r22, 0x0F	; 15
+ 2c8:	81 e0       	ldi	r24, 0x01	; 1
+ 2ca:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
+ 2ce:	08 95       	ret
 				case 2: gpioPinWrite(SEG_BCD_GPIO,SEG_BCD_BITS,2); break;
- 2c8:	42 e0       	ldi	r20, 0x02	; 2
- 2ca:	6f e0       	ldi	r22, 0x0F	; 15
- 2cc:	81 e0       	ldi	r24, 0x01	; 1
- 2ce:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
- 2d2:	08 95       	ret
+ 2d0:	42 e0       	ldi	r20, 0x02	; 2
+ 2d2:	6f e0       	ldi	r22, 0x0F	; 15
+ 2d4:	81 e0       	ldi	r24, 0x01	; 1
+ 2d6:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
+ 2da:	08 95       	ret
 				case 3: gpioPinWrite(SEG_BCD_GPIO,SEG_BCD_BITS,3); break;
- 2d4:	43 e0       	ldi	r20, 0x03	; 3
- 2d6:	6f e0       	ldi	r22, 0x0F	; 15
- 2d8:	81 e0       	ldi	r24, 0x01	; 1
- 2da:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
- 2de:	08 95       	ret
+ 2dc:	43 e0       	ldi	r20, 0x03	; 3
+ 2de:	6f e0       	ldi	r22, 0x0F	; 15
+ 2e0:	81 e0       	ldi	r24, 0x01	; 1
+ 2e2:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
+ 2e6:	08 95       	ret
 				case 4: gpioPinWrite(SEG_BCD_GPIO,SEG_BCD_BITS,4); break;
- 2e0:	44 e0       	ldi	r20, 0x04	; 4
- 2e2:	6f e0       	ldi	r22, 0x0F	; 15
- 2e4:	81 e0       	ldi	r24, 0x01	; 1
- 2e6:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
- 2ea:	08 95       	ret
+ 2e8:	44 e0       	ldi	r20, 0x04	; 4
+ 2ea:	6f e0       	ldi	r22, 0x0F	; 15
+ 2ec:	81 e0       	ldi	r24, 0x01	; 1
+ 2ee:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
+ 2f2:	08 95       	ret
 				case 5: gpioPinWrite(SEG_BCD_GPIO,SEG_BCD_BITS,5); break;
- 2ec:	45 e0       	ldi	r20, 0x05	; 5
- 2ee:	6f e0       	ldi	r22, 0x0F	; 15
- 2f0:	81 e0       	ldi	r24, 0x01	; 1
- 2f2:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
- 2f6:	08 95       	ret
+ 2f4:	45 e0       	ldi	r20, 0x05	; 5
+ 2f6:	6f e0       	ldi	r22, 0x0F	; 15
+ 2f8:	81 e0       	ldi	r24, 0x01	; 1
+ 2fa:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
+ 2fe:	08 95       	ret
 				case 6: gpioPinWrite(SEG_BCD_GPIO,SEG_BCD_BITS,6); break;
- 2f8:	46 e0       	ldi	r20, 0x06	; 6
- 2fa:	6f e0       	ldi	r22, 0x0F	; 15
- 2fc:	81 e0       	ldi	r24, 0x01	; 1
- 2fe:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
- 302:	08 95       	ret
+ 300:	46 e0       	ldi	r20, 0x06	; 6
+ 302:	6f e0       	ldi	r22, 0x0F	; 15
+ 304:	81 e0       	ldi	r24, 0x01	; 1
+ 306:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
+ 30a:	08 95       	ret
 				case 7: gpioPinWrite(SEG_BCD_GPIO,SEG_BCD_BITS,7); break;
- 304:	47 e0       	ldi	r20, 0x07	; 7
- 306:	6f e0       	ldi	r22, 0x0F	; 15
- 308:	81 e0       	ldi	r24, 0x01	; 1
- 30a:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
- 30e:	08 95       	ret
+ 30c:	47 e0       	ldi	r20, 0x07	; 7
+ 30e:	6f e0       	ldi	r22, 0x0F	; 15
+ 310:	81 e0       	ldi	r24, 0x01	; 1
+ 312:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
+ 316:	08 95       	ret
 				case 8: gpioPinWrite(SEG_BCD_GPIO,SEG_BCD_BITS,8); break;
- 310:	48 e0       	ldi	r20, 0x08	; 8
- 312:	6f e0       	ldi	r22, 0x0F	; 15
- 314:	81 e0       	ldi	r24, 0x01	; 1
- 316:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
- 31a:	08 95       	ret
+ 318:	48 e0       	ldi	r20, 0x08	; 8
+ 31a:	6f e0       	ldi	r22, 0x0F	; 15
+ 31c:	81 e0       	ldi	r24, 0x01	; 1
+ 31e:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
+ 322:	08 95       	ret
 				case 9: gpioPinWrite(SEG_BCD_GPIO,SEG_BCD_BITS,9); break;
- 31c:	49 e0       	ldi	r20, 0x09	; 9
- 31e:	6f e0       	ldi	r22, 0x0F	; 15
- 320:	81 e0       	ldi	r24, 0x01	; 1
- 322:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
- 326:	08 95       	ret
+ 324:	49 e0       	ldi	r20, 0x09	; 9
+ 326:	6f e0       	ldi	r22, 0x0F	; 15
+ 328:	81 e0       	ldi	r24, 0x01	; 1
+ 32a:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
+ 32e:	08 95       	ret
 
-00000328 <sevenSegEnable>:
+00000330 <sevenSegEnable>:
 }
 /* This Function is implemented to enable the REquired 7-Segment*/
 /* By writing High to the SEG_ENx_BIT*/
 void sevenSegEnable(En_SevenSegId_t en_segment_id)
 {
 	switch (en_segment_id)
- 328:	88 23       	and	r24, r24
- 32a:	19 f0       	breq	.+6      	; 0x332 <sevenSegEnable+0xa>
- 32c:	81 30       	cpi	r24, 0x01	; 1
- 32e:	39 f0       	breq	.+14     	; 0x33e <sevenSegEnable+0x16>
- 330:	08 95       	ret
+ 330:	88 23       	and	r24, r24
+ 332:	19 f0       	breq	.+6      	; 0x33a <sevenSegEnable+0xa>
+ 334:	81 30       	cpi	r24, 0x01	; 1
+ 336:	39 f0       	breq	.+14     	; 0x346 <sevenSegEnable+0x16>
+ 338:	08 95       	ret
 	{
 		case SEG_0:
 		{
 			gpioPinWrite(SEG_EN1_GPIO,SEG_EN1_BIT,HIGH);
- 332:	4f ef       	ldi	r20, 0xFF	; 255
- 334:	64 e0       	ldi	r22, 0x04	; 4
- 336:	83 e0       	ldi	r24, 0x03	; 3
- 338:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
+ 33a:	4f ef       	ldi	r20, 0xFF	; 255
+ 33c:	64 e0       	ldi	r22, 0x04	; 4
+ 33e:	83 e0       	ldi	r24, 0x03	; 3
+ 340:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
 			break;
- 33c:	08 95       	ret
+ 344:	08 95       	ret
 		
 		}
 		case SEG_1:
 		{
 			gpioPinWrite(SEG_EN2_GPIO,SEG_EN2_BIT,HIGH);
- 33e:	4f ef       	ldi	r20, 0xFF	; 255
- 340:	68 e0       	ldi	r22, 0x08	; 8
- 342:	83 e0       	ldi	r24, 0x03	; 3
- 344:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
- 348:	08 95       	ret
+ 346:	4f ef       	ldi	r20, 0xFF	; 255
+ 348:	68 e0       	ldi	r22, 0x08	; 8
+ 34a:	83 e0       	ldi	r24, 0x03	; 3
+ 34c:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
+ 350:	08 95       	ret
 
-0000034a <sevenSegDisable>:
+00000352 <sevenSegDisable>:
 
 /* This Function is implemented to disable the Required 7-Segment*/
 /* By writing low to the SEG_ENx_BIT*/
 void sevenSegDisable(En_SevenSegId_t en_segment_id)
 {
 	switch (en_segment_id)
- 34a:	88 23       	and	r24, r24
- 34c:	19 f0       	breq	.+6      	; 0x354 <sevenSegDisable+0xa>
- 34e:	81 30       	cpi	r24, 0x01	; 1
- 350:	39 f0       	breq	.+14     	; 0x360 <sevenSegDisable+0x16>
- 352:	08 95       	ret
+ 352:	88 23       	and	r24, r24
+ 354:	19 f0       	breq	.+6      	; 0x35c <sevenSegDisable+0xa>
+ 356:	81 30       	cpi	r24, 0x01	; 1
+ 358:	39 f0       	breq	.+14     	; 0x368 <sevenSegDisable+0x16>
+ 35a:	08 95       	ret
 	{
 		case SEG_0:
 		{
 			gpioPinWrite(SEG_EN1_GPIO,SEG_EN1_BIT,LOW);
- 354:	40 e0       	ldi	r20, 0x00	; 0
- 356:	64 e0       	ldi	r22, 0x04	; 4
- 358:	83 e0       	ldi	r24, 0x03	; 3
- 35a:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
+ 35c:	40 e0       	ldi	r20, 0x00	; 0
+ 35e:	64 e0       	ldi	r22, 0x04	; 4
+ 360:	83 e0       	ldi	r24, 0x03	; 3
+ 362:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
 			break;
- 35e:	08 95       	ret
+ 366:	08 95       	ret
 			
 		}
 		case SEG_1:
 		{
 			gpioPinWrite(SEG_EN2_GPIO,SEG_EN2_BIT,LOW);
- 360:	40 e0       	ldi	r20, 0x00	; 0
- 362:	68 e0       	ldi	r22, 0x08	; 8
- 364:	83 e0       	ldi	r24, 0x03	; 3
- 366:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
- 36a:	08 95       	ret
+ 368:	40 e0       	ldi	r20, 0x00	; 0
+ 36a:	68 e0       	ldi	r22, 0x08	; 8
+ 36c:	83 e0       	ldi	r24, 0x03	; 3
+ 36e:	0e 94 82 00 	call	0x104	; 0x104 <gpioPinWrite>
+ 372:	08 95       	ret
 
-0000036c <SwDelay_ms>:
+00000374 <SwDelay_ms>:
  *  Author: A_ayman
  */ 
 #include "softwareDelay.h"
 
 void SwDelay_ms(uint32_t n)
 {
- 36c:	cf 92       	push	r12
- 36e:	df 92       	push	r13
- 370:	ef 92       	push	r14
- 372:	ff 92       	push	r15
- 374:	0f 93       	push	r16
- 376:	1f 93       	push	r17
- 378:	cf 93       	push	r28
- 37a:	df 93       	push	r29
- 37c:	00 d0       	rcall	.+0      	; 0x37e <SwDelay_ms+0x12>
- 37e:	00 d0       	rcall	.+0      	; 0x380 <SwDelay_ms+0x14>
- 380:	cd b7       	in	r28, 0x3d	; 61
- 382:	de b7       	in	r29, 0x3e	; 62
+ 374:	cf 92       	push	r12
+ 376:	df 92       	push	r13
+ 378:	ef 92       	push	r14
+ 37a:	ff 92       	push	r15
+ 37c:	cf 93       	push	r28
+ 37e:	df 93       	push	r29
+ 380:	00 d0       	rcall	.+0      	; 0x382 <SwDelay_ms+0xe>
+ 382:	00 d0       	rcall	.+0      	; 0x384 <SwDelay_ms+0x10>
+ 384:	cd b7       	in	r28, 0x3d	; 61
+ 386:	de b7       	in	r29, 0x3e	; 62
+ 388:	6b 01       	movw	r12, r22
+ 38a:	7c 01       	movw	r14, r24
 	/*  for each n delay it will give you n ms */
    /* the value of internal_iteration_NO may be less than or greater than the value i choose */
 	/* because of the context switching between functions and how much time does it take. */
 	/*
 	/*/
 	volatile uint32_t z=0;
- 384:	19 82       	std	Y+1, r1	; 0x01
- 386:	1a 82       	std	Y+2, r1	; 0x02
- 388:	1b 82       	std	Y+3, r1	; 0x03
- 38a:	1c 82       	std	Y+4, r1	; 0x04
+ 38c:	19 82       	std	Y+1, r1	; 0x01
+ 38e:	1a 82       	std	Y+2, r1	; 0x02
+ 390:	1b 82       	std	Y+3, r1	; 0x03
+ 392:	1c 82       	std	Y+4, r1	; 0x04
    uint16_t j=0;
 	uint32_t i=0;
-	n=(n/1000)+1;
- 38c:	28 ee       	ldi	r18, 0xE8	; 232
- 38e:	33 e0       	ldi	r19, 0x03	; 3
- 390:	40 e0       	ldi	r20, 0x00	; 0
- 392:	50 e0       	ldi	r21, 0x00	; 0
- 394:	0e 94 00 02 	call	0x400	; 0x400 <__udivmodsi4>
- 398:	69 01       	movw	r12, r18
- 39a:	7a 01       	movw	r14, r20
- 39c:	8f ef       	ldi	r24, 0xFF	; 255
- 39e:	c8 1a       	sub	r12, r24
- 3a0:	d8 0a       	sbc	r13, r24
- 3a2:	e8 0a       	sbc	r14, r24
- 3a4:	f8 0a       	sbc	r15, r24
 	
 	for(i=0; i<n;i++)
- 3a6:	c9 f4       	brne	.+50     	; 0x3da <SwDelay_ms+0x6e>
- 3a8:	1e c0       	rjmp	.+60     	; 0x3e6 <SwDelay_ms+0x7a>
+ 394:	67 2b       	or	r22, r23
+ 396:	68 2b       	or	r22, r24
+ 398:	69 2b       	or	r22, r25
+ 39a:	c9 f4       	brne	.+50     	; 0x3ce <SwDelay_ms+0x5a>
+ 39c:	1e c0       	rjmp	.+60     	; 0x3da <SwDelay_ms+0x66>
 	{
 		for( j=0; j<internal_iteration_NO;j++) //the number of internal iteration related to the kindd of the command and how many cycles does it take.
 		{
 			z++; //it can be any instruction Just for not making the compiler ignore the loop.
- 3aa:	89 81       	ldd	r24, Y+1	; 0x01
- 3ac:	9a 81       	ldd	r25, Y+2	; 0x02
- 3ae:	ab 81       	ldd	r26, Y+3	; 0x03
- 3b0:	bc 81       	ldd	r27, Y+4	; 0x04
- 3b2:	01 96       	adiw	r24, 0x01	; 1
- 3b4:	a1 1d       	adc	r26, r1
- 3b6:	b1 1d       	adc	r27, r1
- 3b8:	89 83       	std	Y+1, r24	; 0x01
- 3ba:	9a 83       	std	Y+2, r25	; 0x02
- 3bc:	ab 83       	std	Y+3, r26	; 0x03
- 3be:	bc 83       	std	Y+4, r27	; 0x04
- 3c0:	41 50       	subi	r20, 0x01	; 1
- 3c2:	51 09       	sbc	r21, r1
+ 39e:	89 81       	ldd	r24, Y+1	; 0x01
+ 3a0:	9a 81       	ldd	r25, Y+2	; 0x02
+ 3a2:	ab 81       	ldd	r26, Y+3	; 0x03
+ 3a4:	bc 81       	ldd	r27, Y+4	; 0x04
+ 3a6:	01 96       	adiw	r24, 0x01	; 1
+ 3a8:	a1 1d       	adc	r26, r1
+ 3aa:	b1 1d       	adc	r27, r1
+ 3ac:	89 83       	std	Y+1, r24	; 0x01
+ 3ae:	9a 83       	std	Y+2, r25	; 0x02
+ 3b0:	ab 83       	std	Y+3, r26	; 0x03
+ 3b2:	bc 83       	std	Y+4, r27	; 0x04
+ 3b4:	21 50       	subi	r18, 0x01	; 1
+ 3b6:	31 09       	sbc	r19, r1
+   uint16_t j=0;
 	uint32_t i=0;
-	n=(n/1000)+1;
 	
 	for(i=0; i<n;i++)
 	{
 		for( j=0; j<internal_iteration_NO;j++) //the number of internal iteration related to the kindd of the command and how many cycles does it take.
- 3c4:	91 f7       	brne	.-28     	; 0x3aa <SwDelay_ms+0x3e>
+ 3b8:	91 f7       	brne	.-28     	; 0x39e <SwDelay_ms+0x2a>
+	/*/
 	volatile uint32_t z=0;
    uint16_t j=0;
 	uint32_t i=0;
-	n=(n/1000)+1;
 	
 	for(i=0; i<n;i++)
- 3c6:	0f 5f       	subi	r16, 0xFF	; 255
- 3c8:	1f 4f       	sbci	r17, 0xFF	; 255
- 3ca:	2f 4f       	sbci	r18, 0xFF	; 255
- 3cc:	3f 4f       	sbci	r19, 0xFF	; 255
- 3ce:	0c 15       	cp	r16, r12
- 3d0:	1d 05       	cpc	r17, r13
- 3d2:	2e 05       	cpc	r18, r14
- 3d4:	3f 05       	cpc	r19, r15
- 3d6:	20 f0       	brcs	.+8      	; 0x3e0 <SwDelay_ms+0x74>
- 3d8:	06 c0       	rjmp	.+12     	; 0x3e6 <SwDelay_ms+0x7a>
- 3da:	00 e0       	ldi	r16, 0x00	; 0
- 3dc:	10 e0       	ldi	r17, 0x00	; 0
- 3de:	98 01       	movw	r18, r16
+ 3ba:	4f 5f       	subi	r20, 0xFF	; 255
+ 3bc:	5f 4f       	sbci	r21, 0xFF	; 255
+ 3be:	6f 4f       	sbci	r22, 0xFF	; 255
+ 3c0:	7f 4f       	sbci	r23, 0xFF	; 255
+ 3c2:	c4 16       	cp	r12, r20
+ 3c4:	d5 06       	cpc	r13, r21
+ 3c6:	e6 06       	cpc	r14, r22
+ 3c8:	f7 06       	cpc	r15, r23
+ 3ca:	21 f4       	brne	.+8      	; 0x3d4 <SwDelay_ms+0x60>
+ 3cc:	06 c0       	rjmp	.+12     	; 0x3da <SwDelay_ms+0x66>
+ 3ce:	40 e0       	ldi	r20, 0x00	; 0
+ 3d0:	50 e0       	ldi	r21, 0x00	; 0
+ 3d2:	ba 01       	movw	r22, r20
  *  Author: A_ayman
  */ 
 #include "softwareDelay.h"
 
 void SwDelay_ms(uint32_t n)
 {
- 3e0:	45 e0       	ldi	r20, 0x05	; 5
- 3e2:	50 e0       	ldi	r21, 0x00	; 0
- 3e4:	e2 cf       	rjmp	.-60     	; 0x3aa <SwDelay_ms+0x3e>
+ 3d4:	29 e4       	ldi	r18, 0x49	; 73
+ 3d6:	31 e0       	ldi	r19, 0x01	; 1
+ 3d8:	e2 cf       	rjmp	.-60     	; 0x39e <SwDelay_ms+0x2a>
 		{
 			z++; //it can be any instruction Just for not making the compiler ignore the loop.
 			
 		}	
 	}
 }
- 3e6:	0f 90       	pop	r0
- 3e8:	0f 90       	pop	r0
- 3ea:	0f 90       	pop	r0
- 3ec:	0f 90       	pop	r0
- 3ee:	df 91       	pop	r29
- 3f0:	cf 91       	pop	r28
- 3f2:	1f 91       	pop	r17
- 3f4:	0f 91       	pop	r16
- 3f6:	ff 90       	pop	r15
- 3f8:	ef 90       	pop	r14
- 3fa:	df 90       	pop	r13
- 3fc:	cf 90       	pop	r12
- 3fe:	08 95       	ret
+ 3da:	0f 90       	pop	r0
+ 3dc:	0f 90       	pop	r0
+ 3de:	0f 90       	pop	r0
+ 3e0:	0f 90       	pop	r0
+ 3e2:	df 91       	pop	r29
+ 3e4:	cf 91       	pop	r28
+ 3e6:	ff 90       	pop	r15
+ 3e8:	ef 90       	pop	r14
+ 3ea:	df 90       	pop	r13
+ 3ec:	cf 90       	pop	r12
+ 3ee:	08 95       	ret
 
-00000400 <__udivmodsi4>:
- 400:	a1 e2       	ldi	r26, 0x21	; 33
- 402:	1a 2e       	mov	r1, r26
- 404:	aa 1b       	sub	r26, r26
- 406:	bb 1b       	sub	r27, r27
- 408:	fd 01       	movw	r30, r26
- 40a:	0d c0       	rjmp	.+26     	; 0x426 <__udivmodsi4_ep>
+000003f0 <__tablejump2__>:
+ 3f0:	ee 0f       	add	r30, r30
+ 3f2:	ff 1f       	adc	r31, r31
+ 3f4:	05 90       	lpm	r0, Z+
+ 3f6:	f4 91       	lpm	r31, Z
+ 3f8:	e0 2d       	mov	r30, r0
+ 3fa:	09 94       	ijmp
 
-0000040c <__udivmodsi4_loop>:
- 40c:	aa 1f       	adc	r26, r26
- 40e:	bb 1f       	adc	r27, r27
- 410:	ee 1f       	adc	r30, r30
- 412:	ff 1f       	adc	r31, r31
- 414:	a2 17       	cp	r26, r18
- 416:	b3 07       	cpc	r27, r19
- 418:	e4 07       	cpc	r30, r20
- 41a:	f5 07       	cpc	r31, r21
- 41c:	20 f0       	brcs	.+8      	; 0x426 <__udivmodsi4_ep>
- 41e:	a2 1b       	sub	r26, r18
- 420:	b3 0b       	sbc	r27, r19
- 422:	e4 0b       	sbc	r30, r20
- 424:	f5 0b       	sbc	r31, r21
+000003fc <_exit>:
+ 3fc:	f8 94       	cli
 
-00000426 <__udivmodsi4_ep>:
- 426:	66 1f       	adc	r22, r22
- 428:	77 1f       	adc	r23, r23
- 42a:	88 1f       	adc	r24, r24
- 42c:	99 1f       	adc	r25, r25
- 42e:	1a 94       	dec	r1
- 430:	69 f7       	brne	.-38     	; 0x40c <__udivmodsi4_loop>
- 432:	60 95       	com	r22
- 434:	70 95       	com	r23
- 436:	80 95       	com	r24
- 438:	90 95       	com	r25
- 43a:	9b 01       	movw	r18, r22
- 43c:	ac 01       	movw	r20, r24
- 43e:	bd 01       	movw	r22, r26
- 440:	cf 01       	movw	r24, r30
- 442:	08 95       	ret
-
-00000444 <__tablejump2__>:
- 444:	ee 0f       	add	r30, r30
- 446:	ff 1f       	adc	r31, r31
- 448:	05 90       	lpm	r0, Z+
- 44a:	f4 91       	lpm	r31, Z
- 44c:	e0 2d       	mov	r30, r0
- 44e:	09 94       	ijmp
-
-00000450 <_exit>:
- 450:	f8 94       	cli
-
-00000452 <__stop_program>:
- 452:	ff cf       	rjmp	.-2      	; 0x452 <__stop_program>
+000003fe <__stop_program>:
+ 3fe:	ff cf       	rjmp	.-2      	; 0x3fe <__stop_program>

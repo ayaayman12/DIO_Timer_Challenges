@@ -8,13 +8,12 @@
 #include "gpio.h"
 #include "registers.h"
 #include "sevenSeg.h"
-#include <util/delay.h>
+#include "softwareDelay.h"
 
 int main(void)
 {
 	 sevenSegInit(SEG_0);
 	 sevenSegInit(SEG_1);
-	 uint8_t count=0;
 	 uint8_t i,j;
 	 uint16_t z;
     /* Replace with your application code */
