@@ -6,7 +6,6 @@
  */ 
 
 #include "pushButton.h"
-#include <util/delay.h>
 /* This function is implemented to configure pushButton Pins as INPUT*/
 void pushButtonInit(En_buttonId_t en_butotn_id)
 {
@@ -42,33 +41,6 @@ void pushButtonInit(En_buttonId_t en_butotn_id)
 	}
 }
 
-
-// En_buttonStatus_t pushButtonGetStatus(En_buttonId_t en_butotn_id)
-// {
-// 	//En_buttonStatus_t ret_status;
-// 	switch(en_butotn_id)
-// 	{
-// 		case BTN_0: 
-// 		{
-// 			_delay_ms(25);
-// 			if(gpioPinRead(BTN_0_GPIO,BTN_0_BIT))
-// 			{
-// 				return Released;
-// 			}
-// 			else
-// 			{
-// 				return Pressed;
-// 			}
-// 			break;		
-// 		}
-// 	}
-// 	
-// 	
-// }
-
-
-
-
  En_buttonStatus_t pushButtonGetStatus(En_buttonId_t en_butotn_id)
 {
 	
@@ -82,8 +54,7 @@ void pushButtonInit(En_buttonId_t en_butotn_id)
 			pin_read=gpioPinRead(BTN_0_GPIO, BTN_0_BIT);
 			if (pin_read==LOW)
 			{
-				_delay_ms(30);
-				//SwDelay_ms(30);
+				SwDelay_ms(30);
 				pin_read=gpioPinRead(BTN_0_GPIO, BTN_0_BIT);
 				if (pin_read==LOW)
 				{
@@ -96,8 +67,7 @@ void pushButtonInit(En_buttonId_t en_butotn_id)
 			}
 			else
 			{
-				_delay_ms(30);
-				//SwDelay_ms(30);
+				SwDelay_ms(30);
 				pin_read=gpioPinRead(BTN_0_GPIO, BTN_0_BIT);
 				if (pin_read==LOW)
 				{
@@ -208,7 +178,6 @@ void pushButtonInit(En_buttonId_t en_butotn_id)
 				if (pin_read==0)
 				{
 					buttonStatus= Pressed;
-				
 				}
 				else
 				{
